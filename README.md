@@ -35,25 +35,30 @@ limitations under the License.
 
 > Test if a value is an array-like object containing only nonnegative numbers.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-nonnegative-number-array
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isNonNegativeNumberArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-nonnegative-number-array@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/assert-is-nonnegative-number-array/tags). For example,
-
-```javascript
-import isNonNegativeNumberArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-nonnegative-number-array@v0.1.0-esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { objects, primitives } from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-nonnegative-number-array@esm/index.mjs';
+var isNonNegativeNumberArray = require( '@stdlib/assert-is-nonnegative-number-array' );
 ```
 
 #### isNonNegativeNumberArray( value )
@@ -63,7 +68,7 @@ Tests if a `value` is an array-like object containing **only** nonnegative numbe
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@esm/index.mjs';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isNonNegativeNumberArray( [ 3.0, new Number(3.0) ] );
 // returns true
@@ -79,7 +84,7 @@ Tests if a `value` is an array-like object `array` containing **only** primitive
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@esm/index.mjs';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isNonNegativeNumberArray.primitives( [ 1.0, 0.0, 10.0 ] );
 // returns true
@@ -95,7 +100,7 @@ Tests if a `value` is an array-like object `array` containing **only** object no
 <!-- eslint-disable no-new-wrappers, max-len -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@esm/index.mjs';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isNonNegativeNumberArray.objects( [ new Number(1.0), new Number(1.0) ] );
 // returns true
@@ -116,14 +121,9 @@ bool = isNonNegativeNumberArray.objects( [ 1.0, 0.0, 10.0 ] );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@esm/index.mjs';
-import isNonNegativeNumberArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-nonnegative-number-array@esm/index.mjs';
+```javascript
+var Number = require( '@stdlib/number-ctor' );
+var isNonNegativeNumberArray = require( '@stdlib/assert-is-nonnegative-number-array' );
 
 var bool = isNonNegativeNumberArray( [ 5.0, 0.2, 3.9 ] );
 // returns true
@@ -139,10 +139,6 @@ bool = isNonNegativeNumberArray( [ 1, 'abc', 3 ] );
 
 bool = isNonNegativeNumberArray( 78.0 );
 // returns false
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -172,7 +168,7 @@ bool = isNonNegativeNumberArray( 78.0 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -202,8 +198,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-nonnegative-number-array.svg
 [npm-url]: https://npmjs.org/package/@stdlib/assert-is-nonnegative-number-array
 
-[test-image]: https://github.com/stdlib-js/assert-is-nonnegative-number-array/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/assert-is-nonnegative-number-array/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/assert-is-nonnegative-number-array/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/assert-is-nonnegative-number-array/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/assert-is-nonnegative-number-array/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/assert-is-nonnegative-number-array?branch=main
@@ -234,7 +230,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-array]: https://github.com/stdlib-js/assert-is-array/tree/esm
+[@stdlib/assert/is-array]: https://github.com/stdlib-js/assert-is-array
 
 <!-- </related-links> -->
 
