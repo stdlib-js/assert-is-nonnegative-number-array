@@ -39,7 +39,7 @@
   "dependencies": {
     "@stdlib/assert-is-nonnegative-number": "^0.2.2",
     "@stdlib/assert-tools-array-like-function": "^0.2.2",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/array-float32": "^0.2.2",
